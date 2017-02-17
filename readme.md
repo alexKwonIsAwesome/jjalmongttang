@@ -10,3 +10,5 @@ This app is made of react.js and its depending libraries.
 - react-redux
 - firebase(database)
 - redux-thunk
+- node-sass
+- react-layout-pack
