@@ -1,8 +1,10 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+
+import HeaderContainer from '../containers/HeaderContainer';
 
 const Home = () => (
   <div>
-    Hello world
+    <HeaderContainer/>
   </div>
 )
 

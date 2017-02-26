@@ -1,0 +1,61 @@
+div#jumbotron {
+    padding: 5rem 0 5rem 0;
+    margin-bottom: 3rem;
+
+    div.grid-100#description-container {
+        text-align: center;
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 300;
+            font-family: $nanum-myeongjo;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 13px;
+            font-family: $nanum-gothic;
+        }
+
+        input {
+            font-size:1rem;
+        }
+    }
+
+    div.grid-50#search-container {
+
+        margin-top: 2rem;
+
+        form {
+            position: relative;
+
+            input.search-bar {
+                width: 100%;
+                height: 30px;
+                font-size: 13px;
+                border-radius: 10px;
+                border: 1px solid #999;
+                padding: 5px 15px 5px 35px;
+                background-color: #f2f2f2;
+                font-family: $nanum-myeongjo;
+                letter-spacing: 1px;
+            }
+
+            input.search-bar:focus {
+                background-color: #fff;
+                outline: none;
+            }
+
+            img {
+                width: 17px;
+                height: 17px;
+                position: absolute;
+                top: 1px;
+                left: 1px;
+                padding: 5px 5px 5px 10px;
+            }
+        }
+
+
+    }
+}
