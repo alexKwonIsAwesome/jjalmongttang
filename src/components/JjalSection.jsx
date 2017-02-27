@@ -19,7 +19,7 @@ class JjalSection extends Component {
     return (
       <div id="jjal-section">
         <div className="grid-container">
-          <StackGrid className="jjal-layout" columnWidth="25%" gutterWidth={20} gutterHeight={20}>
+          <StackGrid className="jjal-layout" columnWidth="25%" gutterWidth={20} gutterHeight={20} duration={0} monitorImagesLoaded={true}>
             {this.renderJjals()}
           </StackGrid>
         </div>
