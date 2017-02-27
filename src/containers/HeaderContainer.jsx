@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../../public/logo.svg';
+import { connect } from 'react-redux';
 
 class HeaderContainer extends Component {
-
   render() {
     return (
       <header className="grid-container">
@@ -26,4 +26,10 @@ class HeaderContainer extends Component {
   }
 }
 
-export default HeaderContainer;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    isLoggedIn: state.auth.isLoggedIn
+  };
+}
+
+export default connect(mapStateToProps)(HeaderContainer);
