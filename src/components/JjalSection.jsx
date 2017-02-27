@@ -1,8 +1,19 @@
 import React, { Component }from 'react';
 import { connect } from 'react-redux';
 import StackGrid from 'react-stack-grid';
+import sizeMe from 'react-sizeme';
 
 class JjalSection extends Component {
+  handleColumnWidth() {
+    if (this.props.size.width >= 1024) {
+      return "25%"
+    } else if (this.props.size.width >= 768 && this.props.size.width < 1024 ) {
+      return "33.33%"
+    } else if (this.props.size.width < 768) {
+      return "50%"
+    }
+  }
+  
   renderJjals() {
     return (
       this.props.jjals.map((jjal) => (
@@ -19,7 +30,7 @@ class JjalSection extends Component {
     return (
       <div id="jjal-section">
         <div className="grid-container">
-          <StackGrid className="jjal-layout" columnWidth="25%" gutterWidth={20} gutterHeight={20} duration={0} monitorImagesLoaded={true}>
+          <StackGrid className="jjal-layout" columnWidth={this.handleColumnWidth()} gutterWidth={20} gutterHeight={20} duration={0} monitorImagesLoaded={true}>
             {this.renderJjals()}
           </StackGrid>
         </div>
@@ -34,4 +45,4 @@ const mapStateToProps = (state, ownprops) => {
   };
 }
 
-export default connect(mapStateToProps)(JjalSection);
+export default connect(mapStateToProps)(sizeMe()(JjalSection));
