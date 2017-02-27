@@ -1,22 +1,18 @@
 div#jjal-section {
-    background-color: #f2f2f2;
+	background-color: #f2f2f2;
 
-    div.grid-container{
+	div.jjal-layout {
+		margin-top: 30px;
 
-        div.grid-25 {
-            margin: 30px 0px 0px 0px;
+		div {
 
-            div.data-instance {
-                margin: 0px 0px 20px 0px;
+				figure {
+					margin: 0;
 
-                a#instance-url{
-
-                    img {
-                        max-height: 100%;
-                        max-width: 100%;
-                    }
-                }
-            }
-        }
-    }
-}
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
