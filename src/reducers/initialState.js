@@ -40,6 +40,10 @@ export default ({
     {
       id: 10,
       source: "https://dummyimage.com/600x690/000/fff",
+    },
+    {
+      id: 11,
+      source: "https://dummyimage.com/600x400/000/fff",
     }
   ]
 });

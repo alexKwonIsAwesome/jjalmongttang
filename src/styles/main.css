@@ -1,5 +1,10 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
 header {
   height: 60px;
   padding: 20px 0px 20px 0px;
@@ -127,20 +132,25 @@ div#jjal-section div.jjal-layout div figure img {
   width: 100%; }
 
 div#instance-section {
-  background-color: #f2f2f2; }
-
-div#instance-section div.grid-container {
-  height: calc(100vh - 100px); }
+  background-color: #f2f2f2;
+  min-height: 100%; }
 
 div#instance-section div.grid-container div#grid-instance {
-  margin-top: 50px; }
+  margin-top: 50px;
+  margin-bottom: 50px; }
 
 @media (min-width: 1025px) {
   div#instance-section div.grid-container div#grid-instance {
     margin-left: 16.5%;
     margin-right: 16.5%; } }
 
-div#instance-section div.grid-container div#grid-instance div.instance-container img {
+div#instance-section div.grid-container div#grid-instance figure {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+
+div#instance-section div.grid-container div#grid-instance figure img {
+  margin: auto;
+  display: block;
   max-height: 100%;
   max-width: 100%; }
 

@@ -2,8 +2,9 @@ import React, { Component }from 'react';
 import { connect } from 'react-redux';
 import StackGrid from 'react-stack-grid';
 import sizeMe from 'react-sizeme';
+import { Link } from 'react-router';
 
-class JjalSection extends Component {
+class JjalListSection extends Component {
   handleColumnWidth() {
     if (this.props.size.width >= 1024) {
       return "25%"
@@ -18,9 +19,11 @@ class JjalSection extends Component {
     return (
       this.props.jjals.map((jjal) => (
         <div key={jjal.id}>
-          <figure>
-            <img alt="love" src={jjal.source} />
-          </figure>
+          <Link to={`/jjal/${jjal.id}`}>
+            <figure>
+              <img alt="love" src={jjal.source} />
+            </figure>
+          </Link>
         </div>
       ))
     )
@@ -45,4 +48,4 @@ const mapStateToProps = (state, ownprops) => {
   };
 }
 
-export default connect(mapStateToProps)(sizeMe()(JjalSection));
+export default connect(mapStateToProps)(sizeMe()(JjalListSection));
