@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../../public/logo.svg';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 
 class HeaderContainer extends Component {
   switchPane() {
@@ -31,7 +32,7 @@ class HeaderContainer extends Component {
     return (
       <header className="grid-container">
         <div className="grid-100">
-          <div id="logo"><a className="active" href="#" id="logo"><img alt="logo" src={logo} /></a></div>
+          <div id="logo"><Link className="active" to="/" id="logo"><img alt="logo" src={logo} /></Link></div>
             <div id="nav-list">
               <ul>
                 <li><a className="active" href="#">메인</a></li>
